@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Acme", sans-serif;
+}
+
+.nav {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+.nav .nav-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1600px;
+  margin: 2em auto;
+}
+
+.nav .nav-center .nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1.5em;
+}
+
+.nav .nav-center .nav-logo h2 {
+  font-size: 30px;
+  margin-left: 18px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.nav .nav-center img {
+  width: 100px;
+}
+
+.nav .nav-center .nav-links a {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.nav .nav-center a:hover {
+  color: black;
+}
+
+.main-section-text {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 2em;
+  width: 500px;
+  top: 30%;
+  left: 10%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.main-section {
+  height: 100vh;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slide {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-clip-path: circle(0% at 0 50%);
+          clip-path: circle(0% at 0 50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider .slide .main-btn {
+  position: absolute;
+  font-size: 2em;
+  letter-spacing: 2px;
+  z-index: 2;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 300px;
+  height: 60px;
+  border: 2px solid black;
+  background: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider .slide .main-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.slider .slide-info {
+  position: absolute;
+  top: 35%;
+  color: white;
+  right: 10%;
+}
+
+.slider .slide-info h2 {
+  font-size: 4em;
+  letter-spacing: 2px;
+  padding: 15px 0;
+  text-shadow: 2px 4px black;
+}
+
+.slider .slide-info p {
+  width: 600px;
+  font-size: 1.6em;
+  margin-left: 2em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider .slide-info p:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.slide-btn {
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slide-btn button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  border: none;
+  height: 22px;
+  width: 22px;
+  margin: 0 2em;
+  cursor: pointer;
+  outline: none;
+}
+
+.slide-btn .slideBtn.active {
+  background-color: black;
+}
+
+.slide.active {
+  -webkit-clip-path: circle(150% at 0 50%);
+          clip-path: circle(150% at 0 50%);
+}
+
+.list-title {
+  font-size: 4em;
+  letter-spacing: 6px;
+  margin-left: 1.5em;
+}
+
+.list-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+.list-container img {
+  width: 100%;
+}
+
+.list-section {
+  background-color: blanchedalmond;
+}
+
+.list {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.list .watch-btn {
+  font-size: 6em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.list:hover img {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.list:hover .watch-btn {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
