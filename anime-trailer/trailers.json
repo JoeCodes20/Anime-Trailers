@@ -1,0 +1,67 @@
+{
+       "bleach":{
+              "image":"./images/bleach.png",
+              "title":"Bleach",
+              "episodes":"366",
+              "release":"2004-10-05",
+              "trailer":"./trailers/BleachHD.m4v",
+              "animeInfo": "Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result."
+       },
+       "dragon":{
+              "image": "./images/dragon-ball-super.png",
+              "title": "Dragon Ball Super",
+              "episodes": "131",
+              "release": "2015-07-05",
+              "trailer":"./trailers/DragonHD.m4v",
+              "animeInfo": "Seven years after the events of Dragon Ball Z, Earth is at peace, and its people live free from any dangers lurking in the universe. However, this peace is short-lived; a sleeping evil awakens in the dark reaches of the galaxy: Beerus, the ruthless God of Destruction."
+       },
+       "attack":{
+              "image":"./images/attack-on-titan.png",
+              "title":"Attack On Titan",
+              "episodes":"25",
+              "release":"2013-04-07",
+              "trailer":"./trailers/AttackHD.mp4",
+              "animeInfo": "Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure."
+       },
+       "hunter":{
+              "image":"./images/hunter-x-hunter.png",
+              "title":"Hunter-X-Hunter",
+              "episodes":"148",
+              "release":"2011-10-02",
+              "trailer":"./trailers/HunterHD.m4v",
+              "animeInfo": "Hunter x Hunter is set in a world where Hunters exist to perform all manner of dangerous tasks like capturing criminals and bravely searching for lost treasures in uncharted territories. Twelve-year-old Gon Freecss is determined to become the best Hunter possible in hopes of finding his father, who was a Hunter himself and had long ago abandoned his young son."
+       },
+       "jojo":{
+              "image":"./images/jojo-bizarre-adventure.png",
+              "title":"JoJo's Bizarre Adventure",
+              "episodes":"26",
+              "release":"2012-10-06",
+              "trailer":"./trailers/JojoHD.m4v",
+              "animeInfo": "In 1868, Dario Brando saves the life of an English nobleman, George Joestar. By taking in Dario's son Dio when the boy becomes fatherless, George hopes to repay the debt he owes to his savior. However Dio, unsatisfied with his station in life, aspires to seize the Joestar house for his own."
+       },
+       "hero":{
+              "image":"./images/my-hero-academia.png",
+              "title":"My Hero Academia",
+              "episodes":"13",
+              "release":"2016-04-03",
+              "trailer":"./trailers/heroHD.m4v",
+              "animeInfo": "The appearance of quirks, newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual."
+       },
+       "naruto":{
+              "image":"./images/Naruto-shippuden.png",
+              "title":"Naruto Shippuden",
+              "episodes":"500",
+              "release":"2007-02-15",
+              "trailer":"./trailers/NarutoHD.m4v",
+              "animeInfo":"It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world."
+       },
+       "piece":{
+              "image":"./images/one-piece.png",
+              "title":"One Piece",
+              "episodes":"nuknown ",
+              "release":"1999-10-20",
+              "trailer":"./trailers/OneHD.m4v",
+              "animeInfo":"Gol D. Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece."
+       }
+       
+}

@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Acme", sans-serif;
+}
+
+.nav {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 2em auto;
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      margin: 0 1.5em;
+      h2 {
+        font-size: 30px;
+        margin-left: 18px;
+        color: white;
+        letter-spacing: 2px;
+      }
+    }
+    img {
+      width: 100px;
+    }
+    .nav-links a {
+      font-size: 1.5em;
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5em;
+      transition: 0.2s;
+    }
+    a:hover {
+      color: black;
+    }
+  }
+}
+.list-section-text {
+  // position: absolute;
+  z-index: 2;
+
+  margin-left: 6.5em;
+  color: black;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  p {
+    font-family: "poppins";
+  }
+  // width: 500px;
+  top: 30%;
+  left: 10%;
+  // background: rgba(0, 0, 0, 0.4);
+}
+body {
+  overflow-x: hidden;
+}
+.main-section {
+  height: 100vh;
+}
+.slider {
+  display: flex;
+  .slide {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(0%);
+    clip-path: circle(0% at 0 50%);
+    transition: 0.2s;
+    .main-btn {
+      position: absolute;
+      font-size: 2em;
+      letter-spacing: 2px;
+      z-index: 2;
+      top: 800px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 300px;
+      height: 60px;
+      border: 2px solid black;
+      background: none;
+      border-radius: 50px;
+      cursor: pointer;
+      outline: none;
+      transition: 0.2s;
+    }
+    .main-btn:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+  .slide-info {
+    position: absolute;
+    top: 300px;
+    color: white;
+    right: 100px;
+    h2 {
+      font-size: 4em;
+      letter-spacing: 2px;
+      padding: 15px 0;
+      text-shadow: 2px 4px black;
+    }
+    p {
+      width: 600px;
+      font-size: 1.6em;
+      margin-left: 2em;
+      transition: 0.2s;
+      font-family: "poppins";
+    }
+    p:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+.slide-btn {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 900px;
+  button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    border: none;
+    height: 22px;
+    width: 22px;
+    margin: 0 2em;
+    cursor: pointer;
+    outline: none;
+  }
+  .slideBtn.active {
+    background-color: black;
+  }
+}
+.slide.active {
+  clip-path: circle(150% at 0 50%);
+}
+.anime-list {
+  margin-top: 4em;
+}
+.list-title {
+  font-size: 4em;
+  letter-spacing: 6px;
+  margin-left: 2.4em;
+  padding-top: 1em;
+  width: 100%;
+  z-index: 2;
+}
+.list-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+  padding-bottom: 2em;
+  img {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+  }
+}
+.list-section {
+  background-color: blanchedalmond;
+  height: 100%;
+  .div {
+    border-top: 1px solid rgb(0, 0, 0);
+    width: 300px;
+    margin-left: 9.5em;
+    margin-top: 1em;
+  }
+}
+.list {
+  position: relative;
+  display: inline-block;
+  transition: 0.4s;
+}
+.list .watch-btn {
+  font-size: 6em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.list:hover img {
+  // filter: blur(2px);
+  transform: scale(1.1);
+}
+.list:hover .watch-btn {
+  opacity: 1;
+}
+.player {
+  position: fixed;
+  overflow: hidden;
+  width: 900px;
+  height: 600px;
+  // width: 1100px;
+  // height: 900px;
+  z-index: 99;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.2s;
+  .anime-title {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 3em;
+  }
+  .anime-releaced {
+    position: absolute;
+    top: 630px;
+    left: 300px;
+    font-size: 30px;
+  }
+  .anime-episodes {
+    position: absolute;
+    top: 630px;
+    left: 50px;
+    font-size: 30px;
+  }
+  .summary {
+    font-size: 1.4em;
+  }
+  .anime-info {
+    position: absolute;
+    top: 680px;
+    left: 50px;
+    max-width: 800px;
+    font-size: 1.2em;
+    font-family: "poppins";
+  }
+  .fa-times {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .video-js {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+  }
+}
+.ratio {
+  width: 1100px;
+  height: 900px;
+}
+.bg-overlay {
+  position: fixed;
+  background: black;
+  z-index: 80;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.video-js {
+  width: 1000px;
+  height: 563px;
+}
+
+// responsivness
+@media only screen and (min-width: 961px) and (max-width: 1400px) {
+  .nav-center {
+    .nav-logo {
+      max-width: 900px;
+      margin-left: 2em;
+      img {
+        margin-left: 2em;
+      }
+    }
+  }
+  .main-section {
+    height: 100vh;
+  }
+  .slider {
+    .slide {
+      width: 100%;
+      height: 62vh;
+      .main-btn {
+        top: 450px;
+        left: 85%;
+        z-index: 2;
+      }
+    }
+    img {
+      width: 100em;
+      transform: translateX(-200px);
+    }
+    .slide-info {
+      top: 200px;
+      left: 200px;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+        margin-left: 0em;
+      }
+    }
+  }
+  .slide-btn {
+    top: 500px;
+    z-index: 9;
+  }
+  .list-title {
+    font-size: 3em;
+    // margin-left: 4em;
+  }
+  .list-section-text {
+    font-size: 1.5em;
+    margin-left: 4.9em;
+    // padding-top: 2em;
+  }
+  .list-section {
+    margin-top: -25em;
+    z-index: 10;
+    .div {
+      margin-left: 7.5em;
+      width: 300px;
+    }
+  }
+  .list-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .player {
+    width: 900px;
+    height: 600px;
+    .anime-episodes {
+      position: absolute;
+      top: 630px;
+      left: 50px;
+    }
+    .anime-releaced {
+      position: absolute;
+      font-size: 30px;
+      top: 630px;
+      left: 500px;
+    }
+    .ainme-info {
+      font-size: 15px;
+    }
+  }
+  .ratio {
+    width: 1100px;
+    height: 900px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .slider {
+    .slide {
+      width: 100%;
+      height: 62vh;
+      .slide-info {
+        top: 200px;
+        .slide-title {
+          font-size: 2em;
+        }
+        p {
+          font-size: 1em;
+        }
+      }
+      .main-btn {
+        top: 450px;
+        left: 50%;
+        z-index: 2;
+      }
+    }
+    img {
+      width: 100em;
+      transform: translateX(-600px);
+    }
+  }
+  .slide-btn {
+    top: 550px;
+    z-index: 9;
+  }
+  player {
+    width: 600px;
+    height: 300px;
+    left: 100%;
+    .anime-episodes {
+      position: absolute;
+      top: 630px;
+      left: 50px;
+    }
+    .anime-releaced {
+      position: absolute;
+      font-size: 30px;
+      left: 400px;
+    }
+    .anime-info {
+      font-size: 20px;
+      top: 1000px;
+    }
+  }
+  .center {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .ratio {
+    width: 100%;
+    height: 100%;
+  }
+  .video-js {
+    width: 900px;
+    height: 506px;
+  }
+  .list-title {
+    font-size: 3em;
+    margin-left: 0em;
+  }
+  .list-section-text {
+    font-size: 1.5em;
+    margin-left: 0em;
+    // padding-top: 2em;
+  }
+  .list-section {
+    margin-top: -25em;
+    z-index: 10;
+    .div {
+      margin-left: 0em;
+      width: 300px;
+    }
+  }
+}
+@media only screen and(max-width: 700px) {
+  .slider {
+    .slide {
+      width: 100%;
+      height: 62vh;
+      .main-btn {
+        top: 450px;
+        left: 50%;
+        z-index: 2;
+      }
+    }
+    img {
+      width: 100em;
+      transform: translateX(-200px);
+    }
+    .slide-info {
+      top: 150px;
+      left: 75px;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+        margin-left: 0em;
+      }
+    }
+  }
+  .video-js {
+    width: 700px;
+    height: 394px;
+  }
+  .ratio {
+    width: 100%;
+    height: 100%;
+  }
+  .list-section {
+    z-index: 10;
+    height: 100%;
+    .div {
+      width: 300px;
+    }
+  }
+  .player {
+    .anime-releaced {
+      position: absolute;
+      font-size: 30px;
+      left: 300px;
+      top: 550px;
+    }
+    .anime-episodes {
+      top: 550px;
+    }
+    .anime-info {
+      font-size: 20px;
+      top: 600px;
+    }
+  }
+  .center {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .slide-btn {
+    button {
+      margin: 0 0.5em;
+      height: 12px;
+      width: 12;
+    }
+  }
+}
+@media only screen and(max-width: 590px) {
+  .nav-center {
+    .nav-logo {
+      max-width: 100px;
+      margin-left: 2em;
+      img {
+        margin-left: 2em;
+        width: 70px;
+      }
+    }
+  }
+  .main-section {
+    height: 100vh;
+  }
+  .center {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .slider {
+    .slide {
+      width: 100%;
+      height: 62vh;
+    }
+    img {
+      width: 100em;
+      transform: translateX(-600px);
+    }
+    .slide-info {
+      top: 150px;
+      left: 30px;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+        margin-left: 0em;
+        max-width: 450px;
+      }
+    }
+  }
+  .slide-btn {
+    top: 550px;
+    z-index: 9;
+  }
+  .list-title {
+    font-size: 3em;
+    // margin-left: 4em;
+  }
+  .list-section-text {
+    font-size: 1.3em;
+  }
+  .list-section {
+    margin-top: -25em;
+    z-index: 10;
+    height: 100%;
+    .div {
+      width: 300px;
+    }
+  }
+  .list-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .video-js {
+    width: 500px;
+    height: 281px;
+  }
+  .ratio {
+    width: 100%;
+    height: 100%;
+  }
+  .player {
+    .anime-releaced {
+      position: absolute;
+      font-size: 30px;
+      left: 250px;
+      top: 430px;
+    }
+    .anime-episodes {
+      top: 430px;
+    }
+    .anime-info {
+      font-size: 20px;
+      top: 500px;
+    }
+    .anime-title {
+      top: 2%;
+    }
+  }
+}
+@media only screen and(max-width: 450px) {
+  .nav-center {
+    .nav-logo {
+      max-width: 50px;
+      margin-left: 2em;
+      img {
+        margin-left: 0em;
+        width: 50px;
+      }
+    }
+    .nav-links {
+      font-size: 1em;
+      margin: 0 -2em;
+    }
+  }
+  .slider {
+    .slide-info {
+      top: 150px;
+      left: 25px;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+        margin-left: 0em;
+        max-width: 350px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 20px) and (max-width: 450px) {
+  .nav {
+    .nav-logo {
+      width: 2px;
+      h2 {
+        width: 10px;
+      }
+      img {
+        width: 40px;
+      }
+    }
+    .nav-links {
+      .nav-home {
+        display: none;
+      }
+    }
+  }
+  .slider {
+    .slide {
+      height: 62vh;
+      img {
+        width: 100em;
+        transform: translateX(-800px);
+      }
+      p {
+        display: none;
+      }
+      .slide-info {
+        .slide-title h2 {
+          top: 0px;
+        }
+      }
+      .main-btn {
+        top: 280px;
+        left: 150px;
+        width: 200px;
+        font-size: 1.4em;
+      }
+    }
+  }
+  .slide-btn {
+    button {
+      margin: 2px;
+    }
+  }
+  .list-section {
+    height: 100%;
+  }
+  .player {
+    .anime-releaced {
+      position: absolute;
+      font-size: 30px;
+      left: 50px;
+      top: 400px;
+    }
+    .anime-episodes {
+      top: 330px;
+    }
+    .anime-info {
+      font-size: 20px;
+      top: 500px;
+    }
+    .anime-title {
+      top: 3%;
+      font-size: 30px;
+      right: 0;
+    }
+    .video-js {
+      width: 250px;
+      height: 141px;
+    }
+    .ratio {
+      width: 100%;
+      height: 100%;
+    }
+  }
+} ;
